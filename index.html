@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fragility — Sara Ramírez Márquez</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 13px;
+      color: #222;
+      background: #fff;
+      min-height: 100vh;
+    }
+
+    /* ── Layout ── */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ── */
+    nav {
+      width: 200px;
+      flex-shrink: 0;
+      padding: 40px 32px;
+    }
+
+    nav .site-title {
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 1.4;
+      color: #222;
+      margin-bottom: 36px;
+      letter-spacing: 0.01em;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      font-size: 13px;
+      color: #aaa;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    nav ul li a:hover {
+      color: #222;
+    }
+
+    /* ── Main content ── */
+    main {
+      flex: 1;
+      padding: 40px 48px 80px;
+    }
+
+    .back {
+      font-size: 12px;
+      color: #aaa;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 48px;
+      letter-spacing: 0.02em;
+    }
+
+    .back:hover { color: #222; }
+
+    /* ── Mosaic grid ── */
+    .mosaic {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+      gap: 48px 40px;
+    }
+
+    /* ── Tile ── */
+    .tile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tile-cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #f0f0f0;
+    }
+
+    .tile-title {
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: normal;
+      color: #222;
+      line-height: 1.4;
+    }
+
+    .tile-year {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 3px;
+    }
+
+    /* ── Audio player ── */
+    .tile-player {
+      margin-top: 12px;
+    }
+
+    audio {
+      width: 100%;
+      height: 28px;
+      outline: none;
+    }
+
+    /* Minimal audio styling — browsers handle the rest */
+    audio::-webkit-media-controls-panel {
+      background: #f7f7f7;
+    }
+
+    /* ── Description ── */
+    .tile-description {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .tile-description p {
+      margin-bottom: 6px;
+    }
+
+    .tile-description ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .tile-description ul li::before {
+      content: "• ";
+    }
+
+    /* ── Links ── */
+    .tile-links {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .tile-links a {
+      font-size: 12px;
+      color: #222;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .tile-links a:hover {
+      color: #aaa;
+    }
+
+    /* ── Format note ── */
+    .tile-format {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #bbb;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+
+    <nav>
+      <p class="site-title">sara ramírez<br>márquez</p>
+      <ul>
+        <li><a href="#">electroacoustic</a></li>
+        <li><a href="#">contemporary</a></li>
+        <li><a href="#">film</a></li>
+        <li><a href="#">discography</a></li>
+        <li><a href="#">biography</a></li>
+        <li><a href="#">events</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">other</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <a class="back" href="#">← back</a>
+
+      <div class="mosaic">
+
+        <!-- Tile: Fragility -->
+        <div class="tile">
+          <img class="tile-cover" src="Fragility.png" alt="Fragility cover" />
+
+          <p class="tile-title">Fragility</p>
+          <p class="tile-year">2024</p>
+
+          <div class="tile-player">
+            <audio controls preload="none">
+              <source src="Fragility_BINAURAL.wav" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <div class="tile-description">
+            <p>Piece inspired by the scripture Corinthians 12: 1–10.</p>
+            <ul>
+              <li>Paul's vision.</li>
+              <li>A Thorn in the Flesh</li>
+            </ul>
+            <p style="margin-top:6px; color:#aaa;">Reina, C. D. (1964). <em>La Santa Biblia: Reina-Valera 1960.</em></p>
+          </div>
+
+          <div class="tile-links">
+            <a href="https://amalayar.bandcamp.com/track/fragility" target="_blank" rel="noopener">Bandcamp</a>
+            <a href="https://soundcloud.com/amalayar/fragility" target="_blank" rel="noopener">SoundCloud</a>
+            <a href="https://drive.google.com/file/d/16Q1uEcIktAesE1OXfw8FiPaT5c3bOkWi/view?usp=sharing" target="_blank" rel="noopener">Download 16ch (no decoder)</a>
+          </div>
+
+          <p class="tile-format">ambisonics</p>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
